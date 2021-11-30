@@ -31,9 +31,8 @@ public class JMSListener {
     public void updateTariff(String response) throws Exception {
         list = service.getTariff(response);
         log.info("Tariff update > " + list);
-        Thread.sleep(500);
+        Thread.sleep(2000);
         messageTemplate.convertAndSend("/message","Update");
-        tariffController.response();
         log.warn("updated");
     }
 

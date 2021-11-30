@@ -54,9 +54,7 @@
                                         <h4><span class="feature" style="float: left">CURRENT CONTRACTS:&nbsp;</span>
                                             <span>${tariff.count}</span></h4></div>
 
-                                    <details>
-                                        <summary><span class="feature">Available supplements:&nbsp;</span>
-                                            </summary>
+
                                     <#list tariff.getSupplementDtoSet()><#items as item>
                                         <div class="clean-pricing-item" style="padding: 5px">
                                             <div><a>Title: </a> <span style="float: right"><b>${item.getTitle()}</b></span></div>
@@ -64,7 +62,6 @@
                                             <div><a>Price (USD per month): </a><span style="float: right"><b>${item.getPrice()}</b></span></div>
                                         </div>
                                     </#items></#list>
-                                    </details>
                                 </form>
                             </div>
                         </#if>
@@ -97,6 +94,5 @@
         <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
     </ul>
     <p class="copyright">Viacheslav Liashenko © 2021</p></footer>
-
 </body>
 </html>

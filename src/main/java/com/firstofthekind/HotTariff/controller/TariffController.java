@@ -40,10 +40,4 @@ public class TariffController {
     public String prepareProduct1(ModelMap model) {
         return "hot.ftl";
     }
-
-    @MessageMapping("/hot")
-    public void response() throws Exception {
-        Thread.sleep(1000); // simulated delay
-        simpMessagingTemplate.convertAndSend("/message", "Updated");
-    }
 }
